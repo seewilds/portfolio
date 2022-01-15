@@ -65,11 +65,15 @@ h1{
 }
 
 
-.nav-scrolled:hover,.nav__list:hover{
-    background: var(--text);
-    color: var(--text-inverse);
-    border-color: var(--text);
-    transition: transform 250ms ease-in-out;
+
+
+@media (hover: hover) and (pointer: fine){
+    .nav-scrolled:hover,.nav__list:hover{
+        background: var(--text);
+        color: var(--text-inverse);
+        border-color: var(--text);
+        transition: transform 250ms ease-in-out;
+    }
 }
 
 
