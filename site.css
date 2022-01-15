@@ -8,10 +8,10 @@ header{
     left: 0;
     right: 0;
     z-index: 999;
+    padding: 1em 3em ;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 3em ;
     transition: background 250ms ease-in;
     background-color: var(--background);
     color: var(--text);
@@ -43,6 +43,12 @@ h1{
     justify-content: center;
 }
 
+@media (max-width:700px){
+    .nav__list{
+        display: inline-block;
+    }
+}
+
 .nav__link{
     --spacing: 1em;
     text-decoration: none;
@@ -67,6 +73,8 @@ h1{
 ::after{
     display: none;
 }
+
+
 
 /*
 :hover{
