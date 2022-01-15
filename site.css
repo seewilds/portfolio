@@ -32,7 +32,15 @@ h1{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
 
+table{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+th,td{
+    padding: 5px;
 }
 
 .nav__list{
@@ -48,8 +56,8 @@ h1{
     .nav__list{
         display: inline-block;
     }
-    .section{
-        padding: 15vh 10vh;
+    section{
+        padding: 30vh 10vh;
     }
 }
 
