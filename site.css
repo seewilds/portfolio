@@ -23,7 +23,7 @@ body{
 }
 
 section{
-    padding: 20vh 10vh 20vh 10vh;
+    padding: 20vh 10vh;
     justify-content: center;
 }
 
@@ -46,6 +46,9 @@ h1{
 @media screen and (max-width:700px){
     .nav__list{
         display: inline-block;
+    }
+    .about{
+        padding: 25vh 10vh;
     }
 }
 
