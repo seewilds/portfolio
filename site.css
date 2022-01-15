@@ -25,6 +25,7 @@ body{
 section{
     padding: 20vh 10vh;
     justify-content: center;
+    position: relative;
 }
 
 h1{
