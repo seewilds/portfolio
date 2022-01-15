@@ -1,0 +1,97 @@
+header{
+    --text: #F1FAEE;
+    --text-inverse: #333;
+    --background: #550c18;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 3em ;
+    transition: background 250ms ease-in;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body{
+    background-color: #133C55;
+    color: #F1FAEE;
+}
+
+section{
+    padding: 20vh 10vh 20vh 10vh;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.nav__list{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__link{
+    --spacing: 1em;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: calc(var(--spacing)/2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+
+.nav-scrolled:hover,.nav__list:hover{
+    background: var(--text);
+    color: var(--text-inverse);
+    border-color: var(--text);
+    transition: transform 250ms ease-in-out;
+}
+
+
+::after{
+    display: none;
+}
+
+/*
+:hover{
+    background: var(--text);
+    border-color: var(--text);
+}
+
+.nav-scrolled{
+    --text:#333;
+    --text-inverse: #f4f4f4;
+    --background: #f4f4f4;
+}
+*/
+
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 750ms ease-in;
+}
+  
+.fade-in.appear {
+    opacity: 1;
+}
+
+.fade-in.disappear{
+    opacity: 0;
+}
