@@ -47,7 +47,7 @@ h1{
     .nav__list{
         display: inline-block;
     }
-    .about{
+    .section{
         padding: 25vh 10vh;
     }
 }
