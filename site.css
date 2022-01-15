@@ -43,7 +43,7 @@ h1{
     justify-content: center;
 }
 
-@media (max-width:700px){
+@media screen and (max-width:700px){
     .nav__list{
         display: inline-block;
     }
