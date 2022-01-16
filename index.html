@@ -13,107 +13,129 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-   
-    <script src="https://kit.fontawesome.com/c02fa6650f.js" crossorigin="anonymous"></script>
+
+    <script
+      src="https://kit.fontawesome.com/c02fa6650f.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="intersection-observer.js" defer></script>
     <script src="menuHelpers.js" defer></script>
   </head>
   <body>
     <header class="nav-scrolled">
-      <li class="nav__list"><a href="javascript:void(0);" class="nav__link" id='menu' onclick="menuExtend()">Menu</a></li>
+      <li class="nav__list">
+        <a
+          href="javascript:void(0);"
+          class="nav__link"
+          id="menu"
+          onclick="menuExtend()"
+          >Menu</a
+        >
+      </li>
       <nav class="main-nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a href="#about" class="nav__link"  onclick="menuCollapse()">About</a>
+            <a href="#about" class="nav__link" onclick="menuCollapse()"
+              >About</a
+            >
           </li>
           <li class="nav__list-item">
-            <a href="#education" class="nav__link" onclick="menuCollapse()">Education</a>
+            <a href="#education" class="nav__link" onclick="menuCollapse()"
+              >Education</a
+            >
           </li>
           <li class="nav__list-item">
-            <a href="#projects" class="nav__link" onclick="menuCollapse()">Projects</a>
+            <a href="#projects" class="nav__link" onclick="menuCollapse()"
+              >Projects</a
+            >
           </li>
           <li class="nav__list-item">
-            <a href="#skills" class="nav__link" onclick="menuCollapse()">Skills</a>
+            <a href="#skills" class="nav__link" onclick="menuCollapse()"
+              >Skills</a
+            >
           </li>
           <li class="nav__list-item">
-            <a href="#experience" class="nav__link" onclick="menuCollapse()">Experience</a>
+            <a href="#experience" class="nav__link" onclick="menuCollapse()"
+              >Experience</a
+            >
           </li>
           <li class="nav__list-item">
-            <a href="#interests" class="nav__link" onclick="menuCollapse()">Interests</a>
+            <a href="#interests" class="nav__link" onclick="menuCollapse()"
+              >Interests</a
+            >
           </li>
-          
         </ul>
       </nav>
     </header>
 
     <div onclick="menuCollapse()">
-    <section class="salutation fade-in">
-      <p>
-        Howdy! My name is Chris, I'm a programmer, and I love problem solving.
-        Mostly I enjoy working with smart, clever people doing interesting
-        things.
-      </p>
-    </section>
+      <section class="salutation fade-in">
+        <p>
+          Howdy! My name is Chris, I'm a programmer, and I love problem solving.
+          Mostly I enjoy working with smart, clever people doing interesting
+          things.
+        </p>
+      </section>
 
-    <section class="about fade-in" id="about">
-      <h1>About</h1>
-      <p>
-        I'm enrolled as a fifth semester student in the Computer Programming and
-        Analysis program at Seneca College. I'm a third generation Canadian and
-        was born and raised in rural Ontario.
-      </p>
-      <p>
-        I have an Honours Bachelor of Arts in Economics from York University.
-        I've also taken a variety of online classes and specializations,
-        including Data Science, R programming and the operation of GIS software.
-        In the past I developed a word prediction app and a Rare Earth company
-        comparison app, both in the R language, and have been stretching his web
-        developing skills at Seneca.
-      </p>
-      <p>
-        I work as Operations Coordinator for a junior mining firm. In that role
-        I provide field support for the company’s exploration programs, manage
-        the exploration department’s database, and am a core member of the
-        Sustainability working group.
-      </p>
-    </section>
-    <section class="education fade-in" id="education">
-      <h1>Education</h1>
-      <table>
-        <tr>
-          <td align="left">Seneca College</td>
-          <td>Computer Programming and Analysis</td>
-          <td align="right">2020-2022</td>
-        </tr>
-        <tr>
-          <td align="left">York University</td>
-          <td>Bachelor of Arts, Specialized Honours, Economics</td>
-          <td align="right">2009-2011</td>
-        </tr>
-      </table>
-      <h2>Certifications</h2>
-      <table>
-        <tr>
-          <td align="left">Mastering R Programming</td>
-          <td>John Hopkins University via Coursera</td>
-          <td align="right">2018</td>
-        </tr>
-        <tr>
-          <td align="left">Data Science</td>
-          <td>John Hopkins University via Coursera</td>
-          <td align="right">2016</td>
-        </tr>
-        <tr>
-          <td align="left">Canadian Securities Course</td>
-          <td>Canadian Securities Institute</td>
-          <td align="right">2011</td>
-        </tr>
-      </table>
-    </section>
-    <section class="projects fade-in" id="projects">
-      <h1>Projects</h1>
-      <!--
+      <section class="about fade-in" id="about">
+        <h1>About</h1>
+        <p>
+          I'm enrolled as a fifth semester student in the Computer Programming
+          and Analysis program at Seneca College. I'm a third generation
+          Canadian and was born and raised in rural Ontario.
+        </p>
+        <p>
+          I have an Honours Bachelor of Arts in Economics from York University.
+          I've also taken a variety of online classes and specializations,
+          including Data Science, R programming and the operation of GIS
+          software. In the past I developed a word prediction app and a Rare
+          Earth company comparison app, both in the R language, and have been
+          stretching his web developing skills at Seneca.
+        </p>
+        <p>
+          I work as Operations Coordinator for a junior mining firm. In that
+          role I provide field support for the company’s exploration programs,
+          manage the exploration department’s database, and am a core member of
+          the Sustainability working group.
+        </p>
+      </section>
+      <section class="education fade-in" id="education">
+        <h1>Education</h1>
+        <table>
+          <tr>
+            <td align="left">Seneca College</td>
+            <td>Computer Programming and Analysis</td>
+            <td align="right">2020-2022</td>
+          </tr>
+          <tr>
+            <td align="left">York University</td>
+            <td>Bachelor of Arts, Specialized Honours, Economics</td>
+            <td align="right">2009-2011</td>
+          </tr>
+        </table>
+        <h2>Certifications</h2>
+        <table>
+          <tr>
+            <td align="left">Mastering R Programming</td>
+            <td>John Hopkins University via Coursera</td>
+            <td align="right">2018</td>
+          </tr>
+          <tr>
+            <td align="left">Data Science</td>
+            <td>John Hopkins University via Coursera</td>
+            <td align="right">2016</td>
+          </tr>
+          <tr>
+            <td align="left">Canadian Securities Course</td>
+            <td>Canadian Securities Institute</td>
+            <td align="right">2011</td>
+          </tr>
+        </table>
+      </section>
+      <section class="projects fade-in" id="projects">
+        <h1>Projects</h1>
+        <!--
     <iframe
       src="https://drive.google.com/file/d/12IdtsuXO-sAxWCLI3zGndUS2F6aV_zcH/preview"
       width="640"
@@ -121,132 +143,141 @@
       allow="autoplay"
     ></iframe>
     -->
-      <ul class="nav__list">
-        <a
-          class="nav__link"
-          href="https://web-422-assignment5.vercel.app/login"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>Music Site</p>
-        </a>
-        <a
-          class="nav__link"
-          href="https://web322-clone-assignment.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>Airbnb Clone App</p>
-        </a>
-        <a
-          class="nav__link"
-          href="https://seewilds.shinyapps.io/text_algo/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>Text Prediction Algorithm</p>
-        </a>
-        <a
-          class="nav__link"
-          href="https://seewilds.shinyapps.io/shiny/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>Rare Earth Deposit App</p>
-        </a>
-      </ul>
-    </section>
-    <section class="skills fade-in" id="skills">
-      <h1>Skills</h1>
-      <p>
-        I'm not an expert, but I have more than a passing
-        knowledge of each, and can't wait to learn more.
-      </p>
-      <table>
-        <tr align="left">
-          <th>Language</th>
-          <th>Framework</th>
-        </tr>
-        <tr>
-          <td>R</td>
-          <td>Express</td>
-        </tr>
-        <tr>
-          <td>C++</td>
-          <td>Angular</td>
-        </tr>
-        <tr>
-          <td>Java</td>
-          <td>MEAN</td>
-        </tr>
-        <tr>
-          <td>JavaScript</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>C#</td>
-          <td></td>
-        </tr>
-        <tr align="left">
-          <th>Tools</th>
-          <th>Databases</th>
-        </tr>
-        <tr>
-          <td>Git</td>
-          <td>Oracle SQL</td>
-        </tr>
-        <tr>
-          <td>Visual Studio Code</td>
-          <td>MongoDB</td>
-        </tr>
-        <tr>
-          <td>Visual Studio</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>R Studio</td>
-          <td></td>
-        </tr>
-      </table>
-    </section>
-    <section class="experience fade-in" id="experience">
-      <h1>Experience</h1>
-      <table>
-        <tr>
-          <th align="left">Avalon Advanced Materials Inc.</th>
-          <th>2011-2022</th>
-        </tr>
-        <tr>
-          <td>Operations Coordinator</td>
-        </tr>
-        <tr>
-          <th align="left">Hockley Valley Brewing Co.</th>
-          <th>2004-2011</th>
-        </tr>
-        <tr>
-          <td>General Manager</td>
-        </tr>
-      </table>
-    </section>
-    <section class="interests fade-in" id="interests">
-      <h1>Interests</h1>
-      <p>
-        In my free time I enjoy reading non-fiction and science fiction. I love
-        reading about economics and business. I listen to podcasts, love music,
-        being outdoors, and watching various video game streams/vods.
-      </p>
-    </section>
-  </div>
+        <ul class="nav__list">
+          <a
+            class="nav__link"
+            href="https://web-422-assignment5.vercel.app/login"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Music Site</p>
+          </a>
+          <a
+            class="nav__link"
+            href="https://web322-clone-assignment.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Airbnb Clone App</p>
+          </a>
+          <a
+            class="nav__link"
+            href="https://seewilds.shinyapps.io/text_algo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Text Prediction Algorithm</p>
+          </a>
+          <a
+            class="nav__link"
+            href="https://seewilds.shinyapps.io/shiny/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Rare Earth Deposit App</p>
+          </a>
+        </ul>
+      </section>
+      <section class="skills fade-in" id="skills">
+        <h1>Skills</h1>
+        <p>
+          I'm not an expert, but I have more than a passing knowledge of each,
+          and can't wait to learn more.
+        </p>
+        <table>
+          <tr align="left">
+            <th>Language</th>
+            <th>Framework</th>
+          </tr>
+          <tr>
+            <td>R</td>
+            <td>Express</td>
+          </tr>
+          <tr>
+            <td>C++</td>
+            <td>Angular</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>MEAN</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td></td>
+          </tr>
+          <tr align="left">
+            <th>Tools</th>
+            <th>Databases</th>
+          </tr>
+          <tr>
+            <td>Git</td>
+            <td>Oracle SQL</td>
+          </tr>
+          <tr>
+            <td>Visual Studio Code</td>
+            <td>MongoDB</td>
+          </tr>
+          <tr>
+            <td>Visual Studio</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>R Studio</td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+      <section class="experience fade-in" id="experience">
+        <h1>Experience</h1>
+        <table>
+          <tr>
+            <th align="left">Avalon Advanced Materials Inc.</th>
+            <th>2011-2022</th>
+          </tr>
+          <tr>
+            <td>Operations Coordinator</td>
+          </tr>
+          <tr>
+            <th align="left">Hockley Valley Brewing Co.</th>
+            <th>2004-2011</th>
+          </tr>
+          <tr>
+            <td>General Manager</td>
+          </tr>
+        </table>
+      </section>
+      <section class="interests fade-in" id="interests">
+        <h1>Interests</h1>
+        <p>
+          In my free time I enjoy reading non-fiction and science fiction. I
+          love reading about economics and business. I listen to podcasts, love
+          music, being outdoors, and watching various video game streams/vods.
+        </p>
+      </section>
+    </div>
   </body>
-  <hr>
+  <hr />
   <footer>
-    <a href='https://github.com/seewilds' target="_blank"
-    rel="noopener noreferrer">
-    <i class="fab fa-github-square fa-3x"> </i>
-  </a>
-  <a href='https://linkedin.com/in/chriswildman' target="_blank"
-  rel="noopener noreferrer">
-    <i class="fab fa-linkedin fa-3x"></i>
-  </a>
+    <a href="mailto:chriswildman@protonmail.com"
+      ><i class="fas fa-envelope-open-text fa-3x"></i
+    ></a>
+    <a
+      href="https://github.com/seewilds"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-github-square fa-3x"> </i>
+    </a>
+    <a
+      href="https://linkedin.com/in/chriswildman"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-linkedin fa-3x"></i>
+    </a>
   </footer>
 </html>

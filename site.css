@@ -1,6 +1,6 @@
 header{
     --text: #F1FAEE;
-    --text-inverse: #d15330;
+    --text-inverse: #55131b;
     --background: #133C55;
 
     position: fixed;
@@ -56,7 +56,7 @@ footer{
 
 footer > a,i{
     padding: 5px 10px;
-    color: #d15330;
+    color: #55131b;
 }
 
 section.interests{
