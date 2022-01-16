@@ -2,8 +2,8 @@ const faders = document.querySelectorAll('.fade-in');
 
 const options = {
     root: null, //default is viewport
-    threshold: .25, // bewteen 0 and 1 - if at 1 100% if item has to be on the page
-    rootMargin: "-50px" //pixels percentage
+    threshold: .15, // bewteen 0 and 1 - if at 1 100% if item has to be on the page
+    rootMargin: "-55px" //pixels percentage
 };
 
 const observer = new IntersectionObserver((entries, options)=>{

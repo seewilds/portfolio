@@ -24,13 +24,9 @@ body{
 }
 
 section{
-    padding: 30vh;
+    padding: 30vh 10vh;
     justify-content: center;
     position: relative;
-}
-
-section.interests{
-    padding: 30vh 0 60vh 0;
 }
 
 h1, h2{
