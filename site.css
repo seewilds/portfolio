@@ -97,7 +97,12 @@ footer > a,i{
         text-align: center;
         display: inline-block;
     }
-
+    nav{
+        display: none;
+    }
+    #menu{
+        display: inline-block;
+    }
 }
 
 
