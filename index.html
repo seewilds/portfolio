@@ -5,25 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chris Wildman Portfolio</title>
-    <link rel="stylesheet" href="site.css"/>
+    <link rel="stylesheet" href="site.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <script src="intersection-observer.js" defer></script>
   </head>
   <body>
-    <header class='nav-scrolled'>
-      <nav class='main-nav'>
-        <ul class='nav__list'>
-          <li class='nav__list-item'><a href='#about' class='nav__link'>About</a></li>
-          <li class='nav__list-item'><a href='#projects' class='nav__link'>Projects</a></li>
-          <li class='nav__list-item'><a href='#skills' class='nav__link'>Skills</a></li>
-          <li class='nav__list-item'><a href='#experience' class='nav__link'>Experience</a></li>
-          <li class='nav__list-item'><a href='#interests' class='nav__link'>Interests</a></li>
-        </ul>
-
-      </nav>
-
-
+    <header class="nav-small">
+      <ul class="nav__list">
+        <li class="nav__list-item"><a href="#" class="nav__link">Menu</a></li>
+      </ul>
     </header>
-    <section class='about fade-in' id='about'>
+    <header class="nav-scrolled">
+      <nav class="main-nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#interests" class="nav__link">Interests</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class='salutation'>
+      <p>
+        Howdy! My name is Chris, and I'm a new programmer. 
+      </p>
+    </section>
+
+    <section class="about fade-in" id="about">
       <h1>About</h1>
       <p>
         Howdy! My name is Chris, and I guess I'm a software developer? I haven't
@@ -32,9 +56,9 @@
         think is trivial, I think is pretty neat!
       </p>
     </section>
-    <section class='projects fade-in' id='projects'>
-    <h1>Projects</h1>
-    <!--
+    <section class="projects fade-in" id="projects">
+      <h1>Projects</h1>
+      <!--
     <iframe
       src="https://drive.google.com/file/d/12IdtsuXO-sAxWCLI3zGndUS2F6aV_zcH/preview"
       width="640"
@@ -42,138 +66,186 @@
       allow="autoplay"
     ></iframe>
     -->
-    <h2>Music App</h2>
-    <iframe src="https://web-422-assignment5.vercel.app/login"></iframe>
-  </section>
-  <section class='skills fade-in' id='skills'>
-    <h1>Skills</h1>
-    <p>
-      I'm not an expert in any of these. I do have more than a passing knowledge
-      of each, and would only be more happy to learn more!
-    </p>
-    <table>
-      <tr><th>Language</th><th>Framework</th></tr>
-      <tr><td>R</td><td>Express</td></tr>
-      <tr><td>C++</td><td>Angular</td></tr>
-      <tr><td>Java</td><td>MEAN</td></tr>
-      <tr><td>JavaScript</td><td></td></tr>
-      <tr><td>C#</td><td></td></tr>
-      <tr><th>Tools</th><th>Databases</th></tr>
-      <tr><td>Git</td><td>Oracle SQL</td></tr>
-      <tr><td>Visual Studio Code</td><td>MonoDB</td></tr>
-      <tr><td>Visual Studio</td><td></td></tr>
-      <tr><td>R Studio</td><td></td></tr>
-    </table>
-  </section>
-  <section class='experience fade-in' id='experience'>
-    <h1>Experience</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-  </section>
-  <section class='interests fade-in' id='interests'>
-    <h1>Interests</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-      dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-      rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-      dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-      cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-      interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat dictum
-      metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem. Class
-      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-      himenaeos. Donec viverra nulla purus, ac fermentum mi pellentesque vel.
-      Pellentesque varius, neque et vehicula malesuada, nunc massa condimentum
-      enim, nec viverra nisl lorem eget ex.
-    </p>
-  </section>
+    <ul class='nav__list'>
+      <a class="nav__link" href="https://web-422-assignment5.vercel.app/login">
+        <h2>Music Site</h2>
+      </a>
+      <a class="nav__link" href="https://web-422-assignment5.vercel.app/login">
+        <h2>Airbnb Clone App</h2>
+      </a>
+      <a class="nav__link" href="https://web-422-assignment5.vercel.app/login">
+        <h2>Text Prediction Algorithm</h2>
+      </a>
+      <a class="nav__link" href="https://web-422-assignment5.vercel.app/login">
+        <h2>Rare Earth Deposit App</h2>
+      </a>
+    </ul>
+      <!--
+      <iframe src="https://web-422-assignment5.vercel.app/login"></iframe>
+      -->
+    </section>
+    <section class="skills fade-in" id="skills">
+      <h1>Skills</h1>
+      <p>
+        I'm not an expert in any of these. I do have more than a passing
+        knowledge of each, and would only be more happy to learn more!
+      </p>
+      <table>
+        <tr>
+          <th>Language</th>
+          <th>Framework</th>
+        </tr>
+        <tr>
+          <td>R</td>
+          <td>Express</td>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>Angular</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td>MEAN</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>C#</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Tools</th>
+          <th>Databases</th>
+        </tr>
+        <tr>
+          <td>Git</td>
+          <td>Oracle SQL</td>
+        </tr>
+        <tr>
+          <td>Visual Studio Code</td>
+          <td>MongoDB</td>
+        </tr>
+        <tr>
+          <td>Visual Studio</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>R Studio</td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+    <section class="experience fade-in" id="experience">
+      <h1>Experience</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+    </section>
+    <section class="interests fade-in" id="interests">
+      <h1>Interests</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
+        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
+        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
+        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
+        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
+        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
+        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
+        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
+        massa condimentum enim, nec viverra nisl lorem eget ex.
+      </p>
+    </section>
   </body>
 </html>

@@ -20,6 +20,8 @@ header{
 body{
     background-color: #133C55;
     color: #F1FAEE;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 section{
@@ -41,6 +43,10 @@ table{
 
 th,td{
     padding: 5px;
+}
+
+.salutation{
+    font-size: 1.75em;
 }
 
 .nav__list{
@@ -73,9 +79,6 @@ th,td{
     font-size: 0.9rem;
 }
 
-
-
-
 @media (hover: hover) and (pointer: fine){
     .nav-scrolled:hover,.nav__list:hover{
         background: var(--text);
@@ -83,29 +86,14 @@ th,td{
         border-color: var(--text);
         transition: transform 250ms ease-in-out;
     }
+    .nav__link:hover{
+        color: #0645AD;
+    }
 }
-
 
 ::after{
     display: none;
 }
-
-
-
-/*
-:hover{
-    background: var(--text);
-    border-color: var(--text);
-}
-
-.nav-scrolled{
-    --text:#333;
-    --text-inverse: #f4f4f4;
-    --background: #f4f4f4;
-}
-*/
-
-
 
 .fade-in {
     opacity: 0;
