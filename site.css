@@ -48,6 +48,10 @@ p{
     font-size: 1.25em;
 }
 
+#menu{
+    display: none;
+}
+
 .salutation{
     font-size: 1.75em;
 }
