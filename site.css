@@ -30,7 +30,7 @@ section{
     position: relative;
 }
 
-h1{
+h1, h2{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -43,6 +43,10 @@ table{
 
 th,td{
     padding: 5px;
+}
+
+p{
+    font-size: 1.25em;
 }
 
 .salutation{
@@ -91,6 +95,10 @@ th,td{
     }
 }
 
+.project-list{
+    display: inline-block;
+}
+
 ::after{
     display: none;
 }
@@ -106,4 +114,8 @@ th,td{
 
 .fade-in.disappear{
     opacity: 0;
+}
+
+.job{
+    display: flex;
 }

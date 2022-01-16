@@ -7,9 +7,12 @@
     <title>Chris Wildman Portfolio</title>
     <link rel="stylesheet" href="site.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="intersection-observer.js" defer></script>
   </head>
@@ -24,6 +27,9 @@
         <ul class="nav__list">
           <li class="nav__list-item">
             <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#education" class="nav__link">Education</a>
           </li>
           <li class="nav__list-item">
             <a href="#projects" class="nav__link">Projects</a>
@@ -41,20 +47,68 @@
       </nav>
     </header>
 
-    <section class='salutation'>
+    <section class="salutation">
       <p>
-        Howdy! My name is Chris, and I'm a new programmer. 
+        Howdy! My name is Chris, I'm a programmer, and I love problem solving.
+        Mostly I enjoy working with smart, clever people doing interesting
+        things.
       </p>
     </section>
 
     <section class="about fade-in" id="about">
       <h1>About</h1>
       <p>
-        Howdy! My name is Chris, and I guess I'm a software developer? I haven't
-        written an app or contributed code professionally ie. for which I've
-        been paid. I have however made some stuff that, while you'll likely
-        think is trivial, I think is pretty neat!
+        I'm enrolled as a fifth semester student in the Computer Programming and
+        Analysis program at Seneca College. I'm a third generation Canadian and
+        was born and raised in rural Ontario.
       </p>
+      <p>
+        I have an Honours Bachelor of Arts in Economics from York University.
+        I've also taken a variety of online classes and specializations,
+        including Data Science, R programming and the operation of GIS software.
+        In the past I developed a word prediction app and a Rare Earth company
+        comparison app, both in the R language, and have been stretching his web
+        developing skills at Seneca.
+      </p>
+      <p>
+        I work as Operations Coordinator for a junior mining firm. In that role
+        I provide field support for the company’s exploration programs, manage
+        the exploration department’s database, and am a core member of the
+        Sustainability working group.
+      </p>
+    </section>
+    <section class="education fade-in" id="education">
+      <h1>Education</h1>
+      <table>
+        <tr>
+          <th align="left">Seneca College</th>
+          <th >Computer Programming and Analysis</th>
+          <th align="right">2020-2022</th>
+        </tr>
+        <tr>
+          <th align="left">York University</th>
+          <th >Bachelor of Arts, Specialized Honours, Economics</th>
+          <th align="right">2009-2011</th>
+        </tr>
+      </table>
+      <h2>Certifications</h2>
+      <table>
+        <tr>
+          <th align="left">Mastering R Programming </th>
+          <th >John Hopkins University via Coursera</th>
+          <th align="right">2018</th>
+        </tr>
+        <tr>
+          <th align="left">Data Science </th>
+          <th >John Hopkins University via Coursera</th>
+          <th align="right">2016</th>
+        </tr>
+        <tr>
+          <th align="left">Canadian Securities Course </th>
+          <th >Canadian Securities Institute</th>
+          <th align="right">2011</th>
+        </tr>
+      </table>
     </section>
     <section class="projects fade-in" id="projects">
       <h1>Projects</h1>
@@ -66,20 +120,40 @@
       allow="autoplay"
     ></iframe>
     -->
-    <ul class='nav__list'>
-      <a class="nav__link" href="https://web-422-assignment5.vercel.app/login" target="_blank" rel="noopener noreferrer">
-        <h2>Music Site</h2>
-      </a>
-      <a class="nav__link" href="https://web322-clone-assignment.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-        <h2>Airbnb Clone App</h2>
-      </a>
-      <a class="nav__link" href="https://seewilds.shinyapps.io/text_algo/" target="_blank" rel="noopener noreferrer">
-        <h2>Text Prediction Algorithm</h2>
-      </a>
-      <a class="nav__link" href="https://seewilds.shinyapps.io/shiny/" target="_blank" rel="noopener noreferrer">
-        <h2>Rare Earth Deposit App</h2>
-      </a>
-    </ul>
+      <ul class="nav__list">
+        <a
+          class="nav__link"
+          href="https://web-422-assignment5.vercel.app/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>Music Site</h2>
+        </a>
+        <a
+          class="nav__link"
+          href="https://web322-clone-assignment.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>Airbnb Clone App</h2>
+        </a>
+        <a
+          class="nav__link"
+          href="https://seewilds.shinyapps.io/text_algo/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>Text Prediction Algorithm</h2>
+        </a>
+        <a
+          class="nav__link"
+          href="https://seewilds.shinyapps.io/shiny/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>Rare Earth Deposit App</h2>
+        </a>
+      </ul>
     </section>
     <section class="skills fade-in" id="skills">
       <h1>Skills</h1>
@@ -136,112 +210,29 @@
     </section>
     <section class="experience fade-in" id="experience">
       <h1>Experience</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
+      <table>
+        <tr>
+          <th align="left">Avalon Advanced Materials Inc.</th>
+          <th>2011-2022</th>
+        </tr>
+        <tr>
+          <td>Operations Coordinator</td>
+        </tr>
+        <tr>
+          <th align="left">Hockley Valley Brewing Co.</th>
+          <th>2004-2011</th>
+        </tr>
+        <tr>
+          <td>General Manager</td>
+        </tr>
+      </table>
     </section>
     <section class="interests fade-in" id="interests">
       <h1>Interests</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non justo
-        dui. Morbi id nulla mollis, tempus quam vel, convallis ligula. Ut mattis
-        rhoncus porttitor. Duis lacinia consequat pulvinar. Aliquam convallis
-        dolor nec dui faucibus, nec elementum lorem viverra. Integer sit amet
-        cursus nunc. Vestibulum et libero libero. Etiam pulvinar mauris eget
-        interdum iaculis. Ut erat libero, efficitur ut enim vitae, feugiat
-        dictum metus. Nunc ac eros aliquet, aliquet justo nec, vulputate sem.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Donec viverra nulla purus, ac fermentum mi
-        pellentesque vel. Pellentesque varius, neque et vehicula malesuada, nunc
-        massa condimentum enim, nec viverra nisl lorem eget ex.
+        In my free time I enjoy reading non-fiction and science fiction. I love
+        reading about economics and business. I listen to podcasts, love music,
+        being outdoors, and watching various video game streams/vods.
       </p>
     </section>
   </body>
