@@ -54,7 +54,7 @@ footer{
     justify-content: center;
 }
 
-footer > a,i{
+footer > a,i, section.projects > ul >a{
     padding: 5px 10px;
     color: #55131b;
 }
