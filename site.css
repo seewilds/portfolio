@@ -20,7 +20,6 @@ header{
 body{
     background-color: #133C55;
     color: #F1FAEE;
-
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -62,16 +61,6 @@ p{
     justify-content: center;
 }
 
-@media screen and (max-width:700px){
-    .nav__list{
-        display: inline-block;
-        text-align: center;
-    }
-    section{
-        padding: 30vh 10vh;
-    }
-}
-
 .nav__link{
     --spacing: 1em;
     text-decoration: none;
@@ -84,8 +73,22 @@ p{
     font-size: 0.9rem;
 }
 
+@media screen and (max-width:700px){
+    .nav__list{
+        text-align: center;
+        display: inline-block;
+    }
+    nav{
+        display:none;
+    }
+    section{
+        padding: 30vh 10vh;
+    }
+}
+
+
 @media (hover: hover) and (pointer: fine){
-    .nav-scrolled:hover,.nav__list:hover{
+    .nav-scrolled:hover,.nav__list:hover,.nav-small:hover{
         background: var(--text);
         color: var(--text-inverse);
         border-color: var(--text);

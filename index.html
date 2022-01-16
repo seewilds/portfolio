@@ -15,34 +15,33 @@
     />
 
     <script src="intersection-observer.js" defer></script>
+    <script src="menuExtend.js" defer></script>
   </head>
   <body>
-    <header class="nav-small">
-      <ul class="nav__list">
-        <li class="nav__list-item"><a href="#" class="nav__link">Menu</a></li>
-      </ul>
-    </header>
+    <input type='checkbox' id='toggle' name='toggle'>
     <header class="nav-scrolled">
+      <li class="nav__list"><a href="javascript:void(0);" class="nav__link" id='menu' onclick="menuExtend()">Menu</a></li>
       <nav class="main-nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a href="#about" class="nav__link">About</a>
+            <a href="#about" class="nav__link" id='hid-menu' onclick="menuCollapse()">About</a>
           </li>
           <li class="nav__list-item">
-            <a href="#education" class="nav__link">Education</a>
+            <a href="#education" class="nav__link" id='hid-menu' onclick="menuCollapse()">Education</a>
           </li>
           <li class="nav__list-item">
-            <a href="#projects" class="nav__link">Projects</a>
+            <a href="#projects" class="nav__link" id='hid-menu' onclick="menuCollapse()">Projects</a>
           </li>
           <li class="nav__list-item">
-            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#skills" class="nav__link" id='hid-menu' onclick="menuCollapse()">Skills</a>
           </li>
           <li class="nav__list-item">
-            <a href="#experience" class="nav__link">Experience</a>
+            <a href="#experience" class="nav__link" id='hid-menu' onclick="menuCollapse()">Experience</a>
           </li>
           <li class="nav__list-item">
-            <a href="#interests" class="nav__link">Interests</a>
+            <a href="#interests" class="nav__link" id='hid-menu' onclick="menuCollapse()">Interests</a>
           </li>
+          
         </ul>
       </nav>
     </header>
@@ -81,32 +80,32 @@
       <h1>Education</h1>
       <table>
         <tr>
-          <th align="left">Seneca College</th>
-          <th >Computer Programming and Analysis</th>
-          <th align="right">2020-2022</th>
+          <td align="left">Seneca College</td>
+          <td>Computer Programming and Analysis</td>
+          <td align="right">2020-2022</td>
         </tr>
         <tr>
-          <th align="left">York University</th>
-          <th >Bachelor of Arts, Specialized Honours, Economics</th>
-          <th align="right">2009-2011</th>
+          <td align="left">York University</td>
+          <td>Bachelor of Arts, Specialized Honours, Economics</td>
+          <td align="right">2009-2011</td>
         </tr>
       </table>
       <h2>Certifications</h2>
       <table>
         <tr>
-          <th align="left">Mastering R Programming </th>
-          <th >John Hopkins University via Coursera</th>
-          <th align="right">2018</th>
+          <td align="left">Mastering R Programming</td>
+          <td>John Hopkins University via Coursera</td>
+          <td align="right">2018</td>
         </tr>
         <tr>
-          <th align="left">Data Science </th>
-          <th >John Hopkins University via Coursera</th>
-          <th align="right">2016</th>
+          <td align="left">Data Science</td>
+          <td>John Hopkins University via Coursera</td>
+          <td align="right">2016</td>
         </tr>
         <tr>
-          <th align="left">Canadian Securities Course </th>
-          <th >Canadian Securities Institute</th>
-          <th align="right">2011</th>
+          <td align="left">Canadian Securities Course</td>
+          <td>Canadian Securities Institute</td>
+          <td align="right">2011</td>
         </tr>
       </table>
     </section>
