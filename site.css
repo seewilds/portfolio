@@ -59,6 +59,10 @@ footer > a,i{
     color: #d15330;
 }
 
+section.interests{
+    padding: 30vh 10vh 60vh 10vh;
+}
+
 #menu{
     display: none;
 }
