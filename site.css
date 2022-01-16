@@ -65,6 +65,7 @@ p{
 @media screen and (max-width:700px){
     .nav__list{
         display: inline-block;
+        text-align: center;
     }
     section{
         padding: 30vh 10vh;
@@ -93,10 +94,6 @@ p{
     .nav__link:hover{
         color: #0645AD;
     }
-}
-
-.project-list{
-    display: inline-block;
 }
 
 ::after{
