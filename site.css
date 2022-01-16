@@ -1,5 +1,5 @@
 header{
-    --text: #F1FAEE;
+    --text: #F5F5F5;
     --text-inverse: #55131b;
     --background: #133C55;
 
@@ -18,7 +18,7 @@ header{
 }
 
 body{
-    background-color: #F1FAEE;
+    background-color: #F5F5F5;
     color: #133C55;
     font-family: 'Montserrat', sans-serif;
 }
