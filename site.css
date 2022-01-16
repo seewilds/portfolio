@@ -1,7 +1,7 @@
 header{
     --text: #F1FAEE;
     --text-inverse: #333;
-    --background: #550c18;
+    --background: #718A99;
 
     position: fixed;
     top: 0;
@@ -78,12 +78,7 @@ p{
         text-align: center;
         display: inline-block;
     }
-    nav{
-        display:none;
-    }
-    section{
-        padding: 30vh 10vh;
-    }
+
 }
 
 
@@ -97,10 +92,6 @@ p{
     .nav__link:hover{
         color: #0645AD;
     }
-}
-
-::after{
-    display: none;
 }
 
 .fade-in {
