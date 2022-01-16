@@ -29,8 +29,8 @@ section{
     position: relative;
 }
 
-section > p{
-    padding: 0 0 30vh 0;
+section.interests{
+    padding: 30vh 0 60vh 0;
 }
 
 h1, h2{
@@ -50,6 +50,17 @@ th,td{
 
 p{
     font-size: 1.25em;
+}
+
+footer{
+    padding: 5px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+footer > a,i{
+    padding: 5px 10px;
+    color: #d15330;
 }
 
 #menu{
