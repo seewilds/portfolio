@@ -1,7 +1,7 @@
 header{
     --text: #F1FAEE;
     --text-inverse: #d15330;
-    --background: #d15330;
+    --background: #133C55;
 
     position: fixed;
     top: 0;
@@ -18,8 +18,8 @@ header{
 }
 
 body{
-    background-color: #133C55;
-    color: #F1FAEE;
+    background-color: #F1FAEE;
+    color: #133C55;
     font-family: 'Montserrat', sans-serif;
 }
 
