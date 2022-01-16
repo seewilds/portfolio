@@ -105,6 +105,15 @@ section.interests{
     }
 }
 
+@media screen and (max-width:510px){
+    section{
+        padding: 30vh 2vh;
+    }
+    section.interests{
+        padding: 30vh 2vh 60vh 2vh;
+    }
+}
+
 
 @media (hover: hover) and (pointer: fine){
     .nav-scrolled:hover,.nav__list:hover,.nav-small:hover{
