@@ -67,6 +67,19 @@ section.interests{
     display: none;
 }
 
+#topButton{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    color:transparent;
+    cursor: pointer;
+}
+
 .salutation{
     font-size: 1.75em;
 }
