@@ -54,7 +54,7 @@ footer{
     justify-content: center;
 }
 
-footer > a,i, section.projects > ul >a{
+footer > a,i, section.projects > ul >a, section.salutation > a >p{
     padding: 5px 10px;
     color: #55131b;
 }
@@ -82,6 +82,13 @@ section.interests{
 
 .salutation{
     font-size: 1.75em;
+}
+
+.salutation > div{
+    color: #55131b;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav__list{

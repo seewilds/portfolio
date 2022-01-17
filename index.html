@@ -21,7 +21,7 @@
 
     <script src="intersection-observer.js" defer></script>
     <script src="menuHelpers.js" defer></script>
-    <script src='toTop.js' defer></script>
+    <script src="toTop.js" defer></script>
   </head>
   <body>
     <header class="nav-scrolled">
@@ -73,12 +73,24 @@
     <div onclick="menuCollapse()">
       <section class="salutation fade-in">
         <p>
-          Howdy! My name is Chris, I'm a programmer, and I love problem solving.
-          Mostly I enjoy working with smart, clever people doing interesting
-          things.
+          Howdy! My name is Chris (he/him), I'm a programmer, and I love problem
+          solving. Mostly I enjoy working with smart, clever people doing
+          interesting things.
         </p>
+        <div>
+          <a
+            href="https://drive.google.com/file/d/1m0mhR-zjDULsxxSzDTDyHbAfhM2WCmlO/preview"
+            class="nav__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><p>Check out the one pager.</p></a
+          >
+        </div>
       </section>
-      <button onclick='toTop()' id="topButton"><i class="fas fa-angle-double-up fa-3x"></i></button>
+
+      <button onclick="toTop()" id="topButton">
+        <i class="fas fa-angle-double-up fa-3x"></i>
+      </button>
       <section class="about fade-in" id="about">
         <h1>About</h1>
         <p>
@@ -202,7 +214,9 @@
             <td>C#</td>
             <td></td>
           </tr>
-          <tr><td></td> </tr>
+          <tr>
+            <td></td>
+          </tr>
           <tr align="left">
             <th>Tools</th>
             <th>Databases</th>
@@ -233,14 +247,32 @@
             <th>2011-2022</th>
           </tr>
           <tr>
-            <td colspan='2'>Operations Coordinator</td>
+            <td colspan="2">Operations Coordinator</td>
           </tr>
           <tr>
             <th align="left">Hockley Valley Brewing Co.</th>
             <th>2004-2011</th>
           </tr>
           <tr>
-            <td colspan='2'>General Manager</td>
+            <td colspan="2">General Manager</td>
+          </tr>
+        </table>
+        <h2>Awards</h2>
+        <table>
+          <tr>
+            <td align="left">President's Honour Roll</td>
+            <td>Seneca College</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td align="left">Special Achievement Award</td>
+            <td>Avalon Advanced Materials Inc.</td>
+            <td>2014</td>
+          </tr>
+          <tr>
+            <td align="left">Dean's List</td>
+            <td>York University</td>
+            <td>2011</td>
           </tr>
         </table>
       </section>
