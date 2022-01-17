@@ -24,7 +24,7 @@ body{
 }
 
 section{
-    padding: 30vh 10vh;
+    padding: 10vh 10vh 60vh 10vh;
     justify-content: center;
     position: relative;
 }
@@ -60,7 +60,7 @@ footer > a,i, section.projects > ul >a, section.salutation > a >p{
 }
 
 section.interests{
-    padding: 30vh 10vh 60vh 10vh;
+    padding: 0vh 10vh 70vh 10vh;
 }
 
 #menu{
@@ -127,10 +127,10 @@ section.interests{
 
 @media screen and (max-width:510px){
     section{
-        padding: 30vh 2vh;
+        padding: 15vh 2vh 30vh 2vh;
     }
     section.interests{
-        padding: 30vh 2vh 60vh 2vh;
+        padding: 15vh 2vh 60vh 2vh;
     }
 }
 
