@@ -63,6 +63,10 @@ section.interests{
     padding: 10vh 10vh 70vh 10vh;
 }
 
+td, th{
+    color: #2575a5;
+}
+
 #menu{
     display: none;
 }
