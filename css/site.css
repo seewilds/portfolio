@@ -20,7 +20,8 @@ header{
 body{
     background-color: #F5F5F5;
     color: #133C55;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+font-family: 'Montserrat', sans-serif;
 }
 
 section{
