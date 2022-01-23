@@ -19,7 +19,7 @@ header {
 
 body {
   background-color: #f5f5f5;
-  color: #133c55;
+  color: #051016;
   font-family: "IBM Plex Mono", monospace;
   font-family: "Montserrat", sans-serif;
 }
@@ -35,6 +35,7 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #133c55;
 }
 
 table {
@@ -62,16 +63,16 @@ i,
 section.projects > ul > a,
 section.salutation > a > p {
   padding: 5px 10px;
-  color: #55131b;
+  color: #216894;
 }
 
 section.interests {
-  padding: 10vh 10vh 70vh 10vh;
+  padding: 10vh 10vh 90vh 10vh;
 }
 
 td,
 th {
-  color: #2575a5;
+  color: #051016;
 }
 
 hr {
@@ -100,7 +101,7 @@ hr {
 }
 
 .salutation > div {
-  color: #55131b;
+  color: #216894;
   text-align: center;
   justify-content: center;
   align-items: center;
