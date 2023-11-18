@@ -15,20 +15,9 @@ header {
   background-color: var(--background);
   color: var(--text);
 }
-
-body {
-  background-color: white;
-  color: #051016;
-  font-family: "IBM Plex Mono", monospace;
-  font-family: "Montserrat", sans-serif;
+hr {
+  border-top: 1px solid #133c55;
 }
-
-section {
-  padding: 10vh 10rem 60vh 10rem;
-  justify-content: center;
-  position: relative;
-}
-
 h1,
 h2 {
   text-align: center;
@@ -36,65 +25,19 @@ h2 {
   letter-spacing: 2px;
   color: #133c55;
 }
-
+p {
+  font-size: 1.25em;
+}
 table {
   margin-left: auto;
   margin-right: auto;
 }
-
-th,
-td {
-  padding: 5px;
-}
-
-p {
-  font-size: 1.25em;
-}
-
-footer {
-  padding: 5px 100px;
-  display: flex;
-  justify-content: center;
-}
-
-i,
-section.projects > ul > a,
-section.salutation > a > p {
-  padding: 5px 10px;
-  color: #051016;
-}
-
-section.interests {
-  padding: 10vh 10vh 90vh 10vh;
-}
-.contact-anchors{
-  display: flex;
-  justify-content: center;
-}
-.contact-anchors > a{
-  text-decoration: none;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-
-section.contact > a{
-  padding-left:5rem;
-  padding-right:5rem;
-  text-decoration: none;
-}
-
 td,
 th {
   color: #051016;
   padding-left:1rem;
   padding-right:1rem;
 }
-
-hr {
-  border-top: 1px solid #133c55;
-}
-
 #menu {
   display: none;
 }
@@ -110,19 +53,6 @@ hr {
   background-color: transparent;
   color: transparent;
   cursor: pointer;
-}
-
-.salutation {
-  font-size: 1.75em;
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-
-.salutation > div {
-  color: #216894;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav__list {
@@ -145,6 +75,40 @@ hr {
   letter-spacing: 2px;
   font-size: 0.9rem;
 }
+
+body {
+  background-color: white;
+  color: #051016;
+  font-family: "IBM Plex Mono", monospace;
+  font-family: "Montserrat", sans-serif;
+}
+.salutation {
+  font-size: 1.75em;
+}
+
+.salutation > div {
+  color: #216894;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  padding-top: 10vh;
+  padding-bottom: 60vh;
+  justify-content: center;
+  position: relative;
+}
+section.interests {
+  padding-bottom: 90vh;
+}
+
+.contact-anchors > a{
+  text-decoration: none;
+  color: #051016;
+  padding-left: 1rem;  
+  padding-right: 1rem;  
+}
 .centre{
   display: flex;
   justify-content: center;
@@ -160,33 +124,12 @@ hr {
   #menu {
     display: inline-block;
   }
-  section {
-    padding: 10vh 2vh 60vh 2vh;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .salutation{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  section.contact > a{
-    padding-left:2rem;
-    padding-right:2rem;
-  }
 }
 
 @media screen and (max-width: 510px) {
-  section {
-    padding: 10vh 2vh 60vh 2vh;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
   section.interests {
-    padding: 10vh 2vh 70vh 2vh;
-  }
-  .salutation{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-top: 10vh;
+    padding-bottom: 70vh;
   }
 }
 
@@ -200,6 +143,7 @@ hr {
     transition: transform 250ms ease-in-out;
   }
   .nav__link:hover,
+  .contact-anchors > a:hover,
   i:hover {
     color: #216894;
   }
@@ -209,15 +153,9 @@ hr {
   opacity: 0;
   transition: opacity 750ms ease-in;
 }
-
 .fade-in.appear {
   opacity: 1;
 }
-
 .fade-in.disappear {
   opacity: 0;
-}
-
-.job {
-  display: flex;
 }
