@@ -24,7 +24,7 @@ body {
 }
 
 section {
-  padding: 2vh 10rem 60vh 10rem;
+  padding: 10vh 10rem 60vh 10rem;
   justify-content: center;
   position: relative;
 }
@@ -57,7 +57,6 @@ footer {
   justify-content: center;
 }
 
-footer > a,
 i,
 section.projects > ul > a,
 section.salutation > a > p {
@@ -68,11 +67,16 @@ section.salutation > a > p {
 section.interests {
   padding: 10vh 10vh 90vh 10vh;
 }
-
 .contact-anchors{
   display: flex;
   justify-content: center;
 }
+.contact-anchors > a{
+  text-decoration: none;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 
 section.contact > a{
   padding-left:5rem;
