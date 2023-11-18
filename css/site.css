@@ -24,7 +24,7 @@ body {
 }
 
 section {
-  padding: 10vh 10rem 60vh 10rem;
+  padding: 2vh 10rem 60vh 10rem;
   justify-content: center;
   position: relative;
 }
@@ -67,6 +67,17 @@ section.salutation > a > p {
 
 section.interests {
   padding: 10vh 10vh 90vh 10vh;
+}
+
+.contact-anchors{
+  display: flex;
+  justify-content: center;
+}
+
+section.contact > a{
+  padding-left:5rem;
+  padding-right:5rem;
+  text-decoration: none;
 }
 
 td,
@@ -153,6 +164,10 @@ hr {
   .salutation{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  section.contact > a{
+    padding-left:2rem;
+    padding-right:2rem;
   }
 }
 
