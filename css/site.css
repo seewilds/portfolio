@@ -1,14 +1,13 @@
 header {
-  --text: #f5f5f5;
-  --text-inverse: #55131b;
-  --background: #133c55;
-
+  --text: white;
+  --text-inverse: #133c55;
+  --background: #051016;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  padding: 1em 3em;
+  padding: 1em 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,14 +17,14 @@ header {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: white;
   color: #051016;
   font-family: "IBM Plex Mono", monospace;
   font-family: "Montserrat", sans-serif;
 }
 
 section {
-  padding: 10vh 10vh 60vh 10vh;
+  padding: 10vh 10rem 60vh 10rem;
   justify-content: center;
   position: relative;
 }
@@ -63,7 +62,7 @@ i,
 section.projects > ul > a,
 section.salutation > a > p {
   padding: 5px 10px;
-  color: #216894;
+  color: #051016;
 }
 
 section.interests {
@@ -73,6 +72,8 @@ section.interests {
 td,
 th {
   color: #051016;
+  padding-left:1rem;
+  padding-right:1rem;
 }
 
 hr {
@@ -98,6 +99,8 @@ hr {
 
 .salutation {
   font-size: 1.75em;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .salutation > div {
@@ -127,7 +130,10 @@ hr {
   letter-spacing: 2px;
   font-size: 0.9rem;
 }
-
+.centre{
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 700px) {
   .nav__list {
     text-align: center;
@@ -139,14 +145,29 @@ hr {
   #menu {
     display: inline-block;
   }
+  section {
+    padding: 10vh 2vh 60vh 2vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .salutation{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 @media screen and (max-width: 510px) {
   section {
     padding: 10vh 2vh 60vh 2vh;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   section.interests {
     padding: 10vh 2vh 70vh 2vh;
+  }
+  .salutation{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -161,7 +182,7 @@ hr {
   }
   .nav__link:hover,
   i:hover {
-    color: #0645ad;
+    color: #216894;
   }
 }
 
