@@ -96,6 +96,8 @@ body {
 section {
   padding-top: 10vh;
   padding-bottom: 60vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
   justify-content: center;
   position: relative;
 }
@@ -130,6 +132,10 @@ section.interests {
   section.interests {
     padding-top: 10vh;
     padding-bottom: 70vh;
+  }
+  section{
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 }
 
