@@ -1,0 +1,4 @@
+{
+    "image": "node:lts-bookworm",
+    "forwardPorts": [3000]
+}
