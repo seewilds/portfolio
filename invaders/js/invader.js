@@ -21,6 +21,7 @@ class Invader {
         this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, this.renderOptions.scale, this.x, this.y, this.sprite.pixels, this.colour);
         const audioUrl = new URL('./../audio/invaderkilled.wav', import.meta.url);
         this.explosionSound = new Audio(audioUrl.toString());
+        this.explosionSound.volume = 0.25;
         this.altActive = false;
     }
     clear() {

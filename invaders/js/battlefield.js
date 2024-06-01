@@ -16,8 +16,10 @@ class Battlefield {
         this.invaders = new Array();
         const audioPrimaryUrl = new URL('./../audio/fastinvader1.wav', import.meta.url);
         this.invaderPrimarySound = new Audio(audioPrimaryUrl.toString());
+        this.invaderPrimarySound.volume = 0.25;
         const audioAltUrl = new URL('./../audio/fastinvader2.wav', import.meta.url);
         this.invaderAltSound = new Audio(audioAltUrl.toString());
+        this.invaderAltSound.volume = 0.25;
         this.soundIsPrimary = true;
         this.direction = 1;
         this.invaderDeltaX = 6 / (this.renderOptions.targetFramesPerSecond / 30);

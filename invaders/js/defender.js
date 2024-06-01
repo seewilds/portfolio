@@ -22,6 +22,7 @@ class Defender {
         this.lastUpdate = performance.now();
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.handleKeyUp = this.handleKeyUp.bind(this);
+        this.spaceDepressed = false;
         this.colour = "rgb(204, 218, 209)";
         this.pixels = spriteFactory(this.sprite.cols, this.sprite.rows, this.renderOptions.scale, this.x, this.y, this.sprite.pixels, this.colour);
         this.addShots = addShots;
@@ -103,7 +104,8 @@ class Defender {
             this.deltaX = 1;
             return;
         }
-        if (event.key === ' ') {
+        if (!this.spaceDepressed && event.key === ' ') {
+            this.spaceDepressed = true;
             this.addShots(new Laser(this.context, this.renderOptions, { x: this.pixels[0].x, y: this.pixels[0].y - 24 }, -1, 'rgb(0,140,255)'));
             this.shotSound.currentTime = 0;
             this.shotSound.play();
@@ -115,6 +117,9 @@ class Defender {
         }
         if (event.key == 'd') {
             this.deltaX = 0;
+        }
+        if (event.key === ' ') {
+            this.spaceDepressed = false;
         }
     }
 }
