@@ -13,7 +13,7 @@ class Spaceship {
         this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, renderOptions.scale, position.x, position.y, this.sprite.pixels, this.colour);
     }
     clear(colour = "black") {
-        this.pixels.forEach(pixel => {
+        this.pixels.forEach((pixel) => {
             pixel.Update(this.context, pixel.x, pixel.y, colour);
         });
     }
@@ -30,10 +30,12 @@ class Spaceship {
     }
     update(secondsElapsed) {
         this.clear();
-        let changeX = this.directionX * Math.floor(this.pixelMovementPerSecond * secondsElapsed);
-        let changeY = this.directionY * Math.floor(this.pixelMovementPerSecond * secondsElapsed);
-        this.pixels.forEach(pixel => {
-            pixel.Update(this.context, pixel.x += changeX, pixel.y += changeY, this.colour);
+        let changeX = this.directionX *
+            Math.floor(this.pixelMovementPerSecond * secondsElapsed);
+        let changeY = this.directionY *
+            Math.floor(this.pixelMovementPerSecond * secondsElapsed);
+        this.pixels.forEach((pixel) => {
+            pixel.Update(this.context, (pixel.x += changeX), (pixel.y += changeY), this.colour);
         });
     }
 }

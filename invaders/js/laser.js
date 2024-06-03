@@ -14,11 +14,11 @@ class Laser {
         this.clear();
         let change = this.direction * Math.floor(this.pixelMovementPerSecond * secondsElapsed);
         this.pixels.forEach((pixel, index) => {
-            pixel.Update(this.context, pixel.x, pixel.y += change, this.colour);
+            pixel.Update(this.context, pixel.x, (pixel.y += change), this.colour);
         });
     }
     clear() {
-        this.pixels.forEach(pixel => {
+        this.pixels.forEach((pixel) => {
             pixel.Update(this.context, pixel.x, pixel.y, "black");
         });
     }

@@ -1,9 +1,9 @@
 import { Battlefield } from "./battlefield.js";
-import { TitleScreen, ScoreBoard, PlayerSection, TransitionScreen } from "./screens.js";
+import { TitleScreen, ScoreBoard, PlayerSection, TransitionScreen, } from "./screens.js";
 export class Game {
     constructor(elementToInsertInto, game, renderOptions) {
-        window.addEventListener('keydown', function (event) {
-            if (event.key === ' ') {
+        window.addEventListener("keydown", function (event) {
+            if (event.key === " ") {
                 event.preventDefault();
             }
         });
@@ -12,8 +12,8 @@ export class Game {
         this.game = game;
         this.framesPerSecond = this.renderOptions.targetFramesPerSecond;
         this.interval = 1000 / this.framesPerSecond;
-        this.canvas = document.createElement("canvas"),
-            this.canvas.width = 196 * this.scale;
+        (this.canvas = document.createElement("canvas")),
+            (this.canvas.width = 196 * this.scale);
         this.canvas.height = 224 * this.scale;
         this.context = this.canvas.getContext("2d");
         this.context.fillStyle = "black";
@@ -26,7 +26,13 @@ export class Game {
         requestAnimationFrame(this.main);
     }
     initializeGame() {
-        this.levelState = { points: 0, lives: 3, numberOfInvaders: 0, initialized: false, running: false };
+        this.levelState = {
+            points: 0,
+            lives: 3,
+            numberOfInvaders: 0,
+            initialized: false,
+            running: false,
+        };
         this.gameId = 0;
         this.levelNumber = -1;
         this.waitingToStartGame = true;
@@ -44,7 +50,7 @@ export class Game {
         this.secondsPaused = 0;
         this.levelNumber++;
         this.battlefield = new Battlefield(this.context, this.renderOptions, this.game.levels[this.levelNumber], this.levelState);
-        this.transitionScreens = new TransitionScreen(this.context, this.renderOptions, 'GET READY', `LEVEL ${(this.levelNumber + 1).toString()}`, 'rgba(0, 255, 0, 1)', 'rgba(0, 255, 0, 1)');
+        this.transitionScreens = new TransitionScreen(this.context, this.renderOptions, "GET READY", `LEVEL ${(this.levelNumber + 1).toString()}`, "rgba(0, 255, 0, 1)", "rgba(0, 255, 0, 1)");
         this.levelState.initialized = false;
     }
     main(timestamp) {
@@ -77,24 +83,31 @@ export class Game {
         else if (this.secondsPaused === 0) {
             this.secondsPaused += delta;
             if (this.levelState.lives <= 0) {
-                this.transitionScreens.updateMainText("GAME OVER", 'red');
-                this.transitionScreens.updateSubText(`POINTS ${this.levelState.points}`, 'red');
+                this.transitionScreens.updateMainText("GAME OVER", "red");
+                this.transitionScreens.updateSubText(`POINTS ${this.levelState.points}`, "red");
             }
             else {
-                this.transitionScreens.updateMainText('WINNER', 'rgba(0, 255, 0, 1)');
-                this.transitionScreens.updateSubText(`POINTS ${this.levelState.points}`, 'rgba(0, 255, 0, 1)');
+                this.transitionScreens.updateMainText("WINNER", "rgba(0, 255, 0, 1)");
+                this.transitionScreens.updateSubText(`POINTS ${this.levelState.points}`, "rgba(0, 255, 0, 1)");
             }
         }
         else {
             this.secondsPaused += delta;
             if (this.secondsPaused / 1000 >= 4) {
-                if (this.levelState.lives > 0 && this.levelNumber < this.game.levels.length - 1) {
+                if (this.levelState.lives > 0 &&
+                    this.levelNumber < this.game.levels.length - 1) {
                     this.transitionScreens.clear();
                     this.initializeLevel();
                 }
                 else {
                     this.transitionScreens.clear();
-                    this.levelState = { points: 0, lives: 3, numberOfInvaders: 0, initialized: false, running: false };
+                    this.levelState = {
+                        points: 0,
+                        lives: 3,
+                        numberOfInvaders: 0,
+                        initialized: false,
+                        running: false,
+                    };
                     this.levelNumber = -1;
                     this.initializeGame();
                 }

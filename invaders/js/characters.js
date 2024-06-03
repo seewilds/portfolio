@@ -1,4 +1,4 @@
-import { characterConstants, Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, SPACE } from "./sprites.js";
+import { characterConstants, Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, SPACE, } from "./sprites.js";
 import { Pixel } from "./pixel.js";
 import { textFactory } from "./factories.js";
 const ascii = {
@@ -12,33 +12,33 @@ const ascii = {
     "7": Seven,
     "8": Eight,
     "9": Nine,
-    "A": A,
-    "B": B,
-    "C": C,
-    "D": D,
-    "E": E,
-    "F": F,
-    "G": G,
-    "H": H,
-    "I": I,
-    "J": J,
-    "K": K,
-    "L": L,
-    "M": M,
-    "N": N,
-    "P": P,
-    "O": O,
-    "Q": Q,
-    "R": R,
-    "S": S,
-    "T": T,
-    "U": U,
-    "V": V,
-    "W": W,
-    "X": X,
-    "Y": Y,
-    "Z": Z,
-    " ": SPACE
+    A: A,
+    B: B,
+    C: C,
+    D: D,
+    E: E,
+    F: F,
+    G: G,
+    H: H,
+    I: I,
+    J: J,
+    K: K,
+    L: L,
+    M: M,
+    N: N,
+    P: P,
+    O: O,
+    Q: Q,
+    R: R,
+    S: S,
+    T: T,
+    U: U,
+    V: V,
+    W: W,
+    X: X,
+    Y: Y,
+    Z: Z,
+    " ": SPACE,
 };
 class Text {
     constructor(context, scale, position, text, colour, spaceOverride = characterConstants.cols) {
@@ -52,8 +52,8 @@ class Text {
         this.pixels = textFactory(this.text, this.x, this.y, this.scale, this.colour, this.spaceOverride);
     }
     clear(colour = "black") {
-        this.pixels.forEach(pixels => {
-            pixels.forEach(pixel => pixel.Update(this.context, pixel.x, pixel.y, colour));
+        this.pixels.forEach((pixels) => {
+            pixels.forEach((pixel) => pixel.Update(this.context, pixel.x, pixel.y, colour));
         });
     }
     setText(text, colour = this.colour) {
@@ -68,8 +68,8 @@ class Text {
         this.x += deltaX;
         this.y += deltaY;
         this.pixels = textFactory(this.text, this.x, this.y, this.scale, this.colour, this.spaceOverride);
-        this.pixels.forEach(pixels => {
-            pixels.forEach(pixel => pixel.Update(this.context, pixel.x, pixel.y));
+        this.pixels.forEach((pixels) => {
+            pixels.forEach((pixel) => pixel.Update(this.context, pixel.x, pixel.y));
         });
     }
 }

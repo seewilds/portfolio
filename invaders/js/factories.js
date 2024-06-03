@@ -17,7 +17,7 @@ function spriteFactory(height, width, scale, xStart, yStart, pixels, colour) {
     return spriteArray;
 }
 function textFactory(text, xStart, yStart, scale, colour, spacingOverride = characterConstants.cols) {
-    let lettersArray = text.split('').map(char => ascii[char]);
+    let lettersArray = text.split("").map((char) => ascii[char]);
     let letters = Array(lettersArray.length);
     for (let i = 0; i < lettersArray.length; i++) {
         letters[i] = spriteFactory(characterConstants.rows, characterConstants.cols, scale, xStart + i * scale * spacingOverride, yStart, lettersArray[i].pixels, colour);

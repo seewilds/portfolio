@@ -12,16 +12,21 @@ class TitleScreen {
         this.pressStartScale = this.renderOptions.scale / 2;
         this.spaceship = new Spaceship(this.context, this.renderOptions, { x: 5, y: 5 }, "silver");
         this.titleYStart = -100;
-        this.titleYEnd = this.centreY("INVADERS FROM SPACE", this.titleScale) - characterConstants.rows * this.titleScale;
+        this.titleYEnd =
+            this.centreY("INVADERS FROM SPACE", this.titleScale) -
+                characterConstants.rows * this.titleScale;
         this.titleYCurent = -100;
         this.titleOpacity = 1;
         this.title = new Text(this.context, this.renderOptions.scale, { x: this.centreX("INVADERS FROM SPACE", this.titleScale, 6), y: -100 }, "INVADERS FROM SPACE", "rgba(0, 255, 0, 1)", 6);
         this.pressStartFadeCurrent = 0;
         this.pressStartFadeStart = 0;
         this.pressStartFadeEnd = 0.8;
-        this.pressStart = new Text(this.context, this.pressStartScale, { x: this.centreX("PRESS SPACE TO START", this.pressStartScale), y: this.centreY("PRESS SPACE TO START", this.pressStartScale) }, "PRESS SPACE TO START", `rgba(178, 34, 34, ${this.pressStartFadeCurrent})`);
+        this.pressStart = new Text(this.context, this.pressStartScale, {
+            x: this.centreX("PRESS SPACE TO START", this.pressStartScale),
+            y: this.centreY("PRESS SPACE TO START", this.pressStartScale),
+        }, "PRESS SPACE TO START", `rgba(178, 34, 34, ${this.pressStartFadeCurrent})`);
         this.stars = this.setStars();
-        window.addEventListener('keydown', (event) => this.handleSpace(event));
+        window.addEventListener("keydown", (event) => this.handleSpace(event));
     }
     clear() {
         this.context?.clearRect(0, 0, this.context.canvas.width, this.context.canvas.height);
@@ -29,20 +34,20 @@ class TitleScreen {
         this.context?.fillRect(0, 0, this.context.canvas.width, this.context.canvas.height);
     }
     centreX(text, scale, spacingOverride = characterConstants.cols) {
-        return (this.context.canvas.width - (spacingOverride * scale * text.length)) / 2;
+        return ((this.context.canvas.width - spacingOverride * scale * text.length) / 2);
     }
     centreY(text, scale) {
-        return (this.context.canvas.height - (characterConstants.rows * scale)) / 2;
+        return (this.context.canvas.height - characterConstants.rows * scale) / 2;
     }
     update(timestamp) {
         this.updateStars();
         let begin = true;
-        if (this.titleYCurent === this.titleYEnd) {
+        if (this.titleYCurent === this.titleYEnd && this.startGame <= 1) {
             this.updateSpaceship(timestamp);
         }
         if (this.startGame > 1) {
             begin = this.fadeOut(timestamp);
-            window.removeEventListener('keydown', (event) => this.handleSpace(event));
+            window.removeEventListener("keydown", (event) => this.handleSpace(event));
         }
         else {
             this.updateTitle();
@@ -107,13 +112,13 @@ class TitleScreen {
     setStars() {
         let starPixels = [];
         for (let i = 0; i < 75; i++) {
-            let pixel = new Pixel(this.renderOptions.scale, this.renderOptions.scale, Math.floor(Math.random() * (this.context.canvas.width)), Math.floor(Math.random() * (this.context.canvas.height)), "white");
+            let pixel = new Pixel(this.renderOptions.scale, this.renderOptions.scale, Math.floor(Math.random() * this.context.canvas.width), Math.floor(Math.random() * this.context.canvas.height), "white");
             starPixels.push(pixel);
         }
         return starPixels;
     }
     updateStars() {
-        this.stars.forEach(star => {
+        this.stars.forEach((star) => {
             star.Update(this.context, star.x, star.y);
         });
     }
@@ -140,15 +145,15 @@ class TransitionScreen {
         this.subText.setText(text, colour);
     }
     clear() {
-        this.mainText.updateTextPosition(0, 0, 'black');
-        this.subText.updateTextPosition(0, 0, 'black');
+        this.mainText.updateTextPosition(0, 0, "black");
+        this.subText.updateTextPosition(0, 0, "black");
     }
     draw() {
         this.mainText.updateTextPosition(0, 0);
         this.subText.updateTextPosition(0, 0);
     }
     centreX(text, scale, spacingOverride = characterConstants.cols) {
-        return (this.context.canvas.width - (spacingOverride * scale * text.length)) / 2;
+        return ((this.context.canvas.width - spacingOverride * scale * text.length) / 2);
     }
 }
 class PlayerSection {
@@ -164,12 +169,12 @@ class PlayerSection {
     setupDefenderLives(lives) {
         let startPixel = 80;
         for (let i = 0; i < lives; i++) {
-            this.defenderLives[i] = spriteFactory(DefenderSprite.cols, DefenderSprite.rows, 3, startPixel, 850, DefenderSprite.pixels, "rgb(204, 218, 209)");
+            this.defenderLives[i] = spriteFactory(DefenderSprite.rows, DefenderSprite.cols, 3, startPixel, 850, DefenderSprite.pixels, "rgb(204, 218, 209)");
             startPixel += DefenderSprite.cols * this.renderOptions.scale + 25;
         }
     }
     clearDefenders() {
-        this.defenderLives.forEach(pixels => pixels.forEach(pixel => {
+        this.defenderLives.forEach((pixels) => pixels.forEach((pixel) => {
             pixel.Update(this.context, pixel.x, pixel.y, "black");
         }));
     }
@@ -182,7 +187,7 @@ class PlayerSection {
             this.setupDefenderLives(this.lives);
         }
         this.defenderLives.forEach((defender, index) => {
-            defender.forEach(pixel => {
+            defender.forEach((pixel) => {
                 pixel.Update(this.context, pixel.x, pixel.y);
             });
         });
@@ -196,10 +201,10 @@ class ScoreBoard {
         this.lives = lives;
         this.hiPoints = 0;
         this.currentPoints = 0;
-        this.currentScoreText = new Text(this.context, 2, { x: 10, y: 10 }, `CURRENT SCORE`, 'white');
-        this.currentScore = new Text(this.context, 2, { x: 10, y: 40 }, `${this.currentPoints.toString()}`, 'white');
-        this.hiScoreText = new Text(this.context, 2, { x: 250, y: 10 }, `HIGH SCORE`, 'white');
-        this.hiScore = new Text(this.context, 2, { x: 250, y: 40 }, `${this.hiPoints.toString()}`, 'white');
+        this.currentScoreText = new Text(this.context, 2, { x: 10, y: 10 }, `CURRENT SCORE`, "white");
+        this.currentScore = new Text(this.context, 2, { x: 10, y: 40 }, `${this.currentPoints.toString()}`, "white");
+        this.hiScoreText = new Text(this.context, 2, { x: 250, y: 10 }, `HIGH SCORE`, "white");
+        this.hiScore = new Text(this.context, 2, { x: 250, y: 40 }, `${this.hiPoints.toString()}`, "white");
     }
     updateScore(score) {
         this.currentScore.setText(score.toString());
