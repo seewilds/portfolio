@@ -31,6 +31,10 @@ class Battlefield {
         this.laserShots = [];
         this.shields = [];
         this.headerFooterPercentage = 0.1;
+        this.dimensions = {
+            height: this.context.canvas.height,
+            width: this.context.canvas.width,
+        };
         this.invaderRow = new Array(this.level.setup.length);
         this.defender = new Defender(this.context, this.renderOptions, {
             x: this.context.canvas.width,
@@ -95,14 +99,10 @@ class Battlefield {
         let shields = new Array(level.shieldCount);
         let spaceBetween = this.getHorizontalSpace(ShieldSprite, level.shieldCount);
         let shieldWidth = ShieldSprite.cols * this.renderOptions.scale;
-        let shieldHeight = ShieldSprite.rows * this.renderOptions.scale +
-            this.renderOptions.scale * this.renderOptions.scale;
         for (let i = 0; i < level.shieldCount; i++) {
             shields[i] = new Shield(this.context, this.renderOptions, {
                 x: i * (shieldWidth + spaceBetween) + spaceBetween,
-                y: 4.5 * shieldHeight +
-                    5 +
-                    Math.floor(this.context.canvas.height * 0.3),
+                y: Math.floor(this.context.canvas.height * 0.72),
             });
         }
         return shields;
@@ -110,7 +110,7 @@ class Battlefield {
     anyAtRightEdge() {
         for (let i = 0; i < this.invaderRow.length; i++) {
             for (let j = 0; j < this.invaderRow[i].length; j++) {
-                if (this.invaderRow[i][this.invaderRow[i].length - 1].pixels.some((pixel) => pixel.x >= this.context.canvas.width)) {
+                if (this.invaderRow[i][this.invaderRow[i].length - 1].pixels.some((pixel) => pixel.x >= this.dimensions.width)) {
                     return true;
                 }
             }
@@ -129,12 +129,17 @@ class Battlefield {
     }
     updateInvaders(timestamp) {
         this.removeInvaders();
+        let topOfDefender = this.defender.getBoundingBox()[0].y;
         let atLeftBoundary = this.anyAtLeftEdge();
         let atRightBoundary = this.anyAtRightEdge();
         let invaderMoved = false;
         for (let i = 0; i < this.invaderRow.length; i++) {
             for (let j = 0; j < this.invaderRow[i].length; j++) {
                 invaderMoved = this.invaderRow[i][j].update(timestamp, atLeftBoundary, atRightBoundary);
+                this.updateInvadersConsumeShields(this.invaderRow[i][j]);
+                if (this.invaderRow[i][j].getBoundingBox()[1].y >= topOfDefender) {
+                    this.levelState.lives = 0;
+                }
             }
         }
         if (invaderMoved) {
@@ -144,6 +149,15 @@ class Battlefield {
     }
     invadersFire() {
         this.invaderRow.forEach((invaders) => invaders.forEach((invader) => invader.fire()));
+    }
+    updateInvadersConsumeShields(invader) {
+        for (let k = 0; k < this.shields.length; k++) {
+            for (let l = this.shields[k].pixels.length - 1; l >= 0; l--) {
+                if (invader.isPixelInBoundingBox(this.shields[k].pixels[l])) {
+                    this.shields[k].pixels.splice(l, 1);
+                }
+            }
+        }
     }
     updateShields() {
         for (let i = this.shields.length - 1; i >= 0; i--) {
@@ -169,11 +183,11 @@ class Battlefield {
         this.pauseSeconds = 0;
     }
     updateHits() {
-        this.invaderRow.forEach((invaders, index) => {
+        this.invaderRow.forEach((invaders) => {
             for (let i = invaders.length - 1; i >= 0; i--) {
                 for (let j = this.laserShots.length - 1; j >= 0; j--) {
                     if (this.laserShots[j].direction < 0 &&
-                        invaders[i].hit(this.laserShots[j])) {
+                        invaders[i].processLaser(this.laserShots[j])) {
                         this.removeLaserShot(j);
                         this.levelState.points += 10 + (4 % (i + 1)) * 10;
                     }
@@ -197,10 +211,8 @@ class Battlefield {
         }
         for (let j = this.laserShots.length - 1; j >= 0; j--) {
             if (this.laserShots[j].pixels.some((pixel) => {
-                return (pixel.y <
-                    this.context.canvas.height * this.headerFooterPercentage ||
-                    pixel.y >
-                        this.context.canvas.height * (1 - this.headerFooterPercentage));
+                return (pixel.y < this.dimensions.height * this.headerFooterPercentage ||
+                    pixel.y > this.dimensions.height * (1 - this.headerFooterPercentage));
             })) {
                 this.removeLaserShot(j);
             }

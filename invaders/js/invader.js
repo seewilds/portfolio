@@ -61,15 +61,27 @@ class Invader {
         this.firstRender = false;
         return invaderMoved;
     }
-    fire() {
-        if (this.health > 0 && this.canFire && Math.random() >= 0.99) {
-            this.addShot(new Laser(this.context, this.renderOptions, {
-                x: this.pixels[this.sprite.laserPosition.laserXPosition].x,
-                y: this.pixels[this.sprite.laserPosition.laserXPosition].y +
-                    (this.sprite.laserPosition.rowsToBottom - 2) *
-                        this.renderOptions.scale,
-            }, 1, "rgb(255,15,0)"));
+    switchSprite() {
+        if (this.health === 0) {
+            this.colour = "rgb(249, 200, 14)";
+            this.pixels = spriteFactory(this.explosion.rows, this.explosion.cols, this.renderOptions.scale, this.x, this.y, this.explosion.pixels, this.colour);
+            this.altActive = false;
         }
+        else if (this.altActive) {
+            this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, this.renderOptions.scale, this.x, this.y, this.sprite.alternatePixels, this.colour);
+            this.altActive = false;
+        }
+        else {
+            this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, this.renderOptions.scale, this.x, this.y, this.sprite.pixels, this.colour);
+            this.altActive = true;
+        }
+    }
+    isLaserBlocked(invader) {
+        let boundingBox = invader.getBoundingBox();
+        return (this.pixels[this.sprite.laserPosition.laserXPosition].x >=
+            boundingBox[0].x - 2 * this.renderOptions.scale &&
+            this.pixels[this.sprite.laserPosition.laserXPosition].x <=
+                boundingBox[1].x + 2 * this.renderOptions.scale);
     }
     setCanFire(invaderRows) {
         for (let i = 0; i < invaderRows.length; i++) {
@@ -85,7 +97,17 @@ class Invader {
         this.canFire = true;
         return true;
     }
-    hit(laser) {
+    fire() {
+        if (this.health > 0 && this.canFire && Math.random() >= 0.99) {
+            this.addShot(new Laser(this.context, this.renderOptions, {
+                x: this.pixels[this.sprite.laserPosition.laserXPosition].x,
+                y: this.pixels[this.sprite.laserPosition.laserXPosition].y +
+                    (this.sprite.laserPosition.rowsToBottom - 2) *
+                        this.renderOptions.scale,
+            }, 1, "rgb(255,15,0)"));
+        }
+    }
+    processLaser(laser) {
         if (this.health === 0) {
             return false;
         }
@@ -117,28 +139,6 @@ class Invader {
             pixel.x <= boundingBox[1].x &&
             pixel.y >= boundingBox[0].y &&
             pixel.y <= boundingBox[1].y);
-    }
-    isLaserBlocked(invader) {
-        let boundingBox = invader.getBoundingBox();
-        return (this.pixels[this.sprite.laserPosition.laserXPosition].x >=
-            boundingBox[0].x - 2 * this.renderOptions.scale &&
-            this.pixels[this.sprite.laserPosition.laserXPosition].x <=
-                boundingBox[1].x + 2 * this.renderOptions.scale);
-    }
-    switchSprite() {
-        if (this.health === 0) {
-            this.colour = "rgb(249, 200, 14)";
-            this.pixels = spriteFactory(this.explosion.rows, this.explosion.cols, this.renderOptions.scale, this.x, this.y, this.explosion.pixels, this.colour);
-            this.altActive = false;
-        }
-        else if (this.altActive) {
-            this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, this.renderOptions.scale, this.x, this.y, this.sprite.alternatePixels, this.colour);
-            this.altActive = false;
-        }
-        else {
-            this.pixels = spriteFactory(this.sprite.rows, this.sprite.cols, this.renderOptions.scale, this.x, this.y, this.sprite.pixels, this.colour);
-            this.altActive = true;
-        }
     }
 }
 export { Invader };
